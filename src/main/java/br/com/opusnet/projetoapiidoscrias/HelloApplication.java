@@ -10,36 +10,15 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application implements Runnable {
+public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        // Criando um novo Group para ser usado como raiz
-        Group root = new Group();
 
-        // Criando a GameScene com o root
-        GameScene gameScene = new GameScene(root);
-
-        // Definindo a cena no Stage
-        stage.setScene(gameScene);
-
-        // Configurações do Stage
-        stage.setTitle("Stage demo program uuu");
-        stage.setWidth(500);
-        stage.setHeight(500);
-        stage.setResizable(false);
-        stage.setX(50);
-        stage.setY(50);
-        stage.show();
+      GameWindow gameWindow = new GameWindow(stage);
     }
 
     public static void main(String[] args){
-
-
         launch(args);
     }
 
-    @Override
-    public void run() {
-
-    }
 }
