@@ -1,19 +1,12 @@
 package br.com.opusnet.projetoapiidoscrias;
 
+import br.com.opusnet.projetoapiidoscrias.window.GameWindow;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.scene.input.KeyCombination;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-
       GameWindow gameWindow = new GameWindow(stage);
     }
 
