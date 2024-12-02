@@ -3,11 +3,15 @@ package br.com.opusnet.projetoapiidoscrias;
 import br.com.opusnet.projetoapiidoscrias.scene.HomeScene;
 import br.com.opusnet.projetoapiidoscrias.util.SizeScreen;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class HelloApplication extends Application {
 
@@ -18,18 +22,18 @@ public class HelloApplication extends Application {
         SizeScreen.valueWidth = screenBounds.getWidth();
         SizeScreen.valueHeight = screenBounds.getHeight();
 
-        // Criando a cena inicial (HomeScene)
-        HomeScene homeScene = new HomeScene(new Group(), stage);
-
-        //faz o L
-        
-        // Configurações do Stage
-        stage.setFullScreen(true);
-        stage.setMinWidth(400);
-        stage.setMaximized(true);
-        stage.setTitle("Exemplo JavaFX");
-        stage.setScene(homeScene);  // Define HomeScene diretamente no Stage
-        stage.show();
+        // Chamando a root que inicia o arquivo .fxml
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("start-screen.fxml"));
+            // Criando a cena inicial (HomeScene)
+            HomeScene homeScene = new HomeScene(root, stage);
+            // Configurações do Stage
+            stage.setTitle("Valus");
+            stage.setScene(homeScene);  // Define HomeScene diretamente no Stage
+            stage.show();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {
