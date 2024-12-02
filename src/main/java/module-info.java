@@ -17,4 +17,6 @@ module br.com.opusnet.projetoapiidoscrias {
     opens br.com.opusnet.projetoapiidoscrias.scene to javafx.fxml;
     exports br.com.opusnet.projetoapiidoscrias.window;
     opens br.com.opusnet.projetoapiidoscrias.window to javafx.fxml;
+    exports br.com.opusnet.projetoapiidoscrias.controlls;
+    opens br.com.opusnet.projetoapiidoscrias.controlls to javafx.fxml;
 }

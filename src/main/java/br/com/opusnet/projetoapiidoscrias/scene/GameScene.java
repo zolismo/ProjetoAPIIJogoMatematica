@@ -1,5 +1,12 @@
 package br.com.opusnet.projetoapiidoscrias.scene;
 
+import br.com.opusnet.projetoapiidoscrias.util.Updatable;
+import javafx.scene.*;
+import javafx.scene.Parent;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+import br.com.opusnet.projetoapiidoscrias.controlls.*;
+
 import br.com.opusnet.projetoapiidoscrias.util.SizeScreen;
 import javafx.application.Platform;
 import javafx.scene.Group;
@@ -13,66 +20,49 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GameScene extends Scene implements Runnable, SizeScreen {
+public class GameScene extends Scene implements Updatable {
 
-    private Thread gameThread;
-    private Parent group;
-    private Stage stage;
+    private Group group;
+    private GameLoop gameLoop;
 
     public GameScene(Parent root, Stage stage) {
         super(root);
-        this.stage = stage;
-        if (!(root instanceof Group)) {
-            throw new IllegalArgumentException("Algum erro");
-        }
-        group = (Group) root;
+        this.group = (Group) root;
+
+
         initializeScene();
 
-        // Iniciar a thread do jogo no construtor
-        gameThread = new Thread(this); // Criando a thread e passando o próprio objeto como Runnable
-        gameThread.start(); // Iniciando a thread
+
+        gameLoop = new GameLoop(this);  // Passa a si mesma como o Updatable
+        new Thread(gameLoop).start();  // Inicia o game loop em uma thread separada
     }
 
+    private void initializeScene() {
+        Button buttonHome = new Button("Voltar para Home");
+        buttonHome.setTranslateX(400);
+        buttonHome.setTranslateY(300);
+        buttonHome.setMinHeight(45);
+        buttonHome.setOnAction(event -> {
+            goToHomeScreen();
+        });
 
-    protected void initializeScene() {
-        Button b = new Button("dsa");
-        List<Node> nodeList = new ArrayList<>();
-        b.setTranslateX(screenWidth/2);
-        b.setTranslateY(screenHeight/2);
-        b.setMinHeight(45);
-        nodeList.add(b);
-
-
-        ((Group) group).getChildren().addAll(nodeList);
-        render();
+        ((Group) group).getChildren().add(buttonHome);
     }
 
-    public void render() {
-        // Realizar renderização da cena aqui
-    }
+    private void goToHomeScreen() {
 
-    public void update() {
-        // Atualizar lógica do jogo aqui
+
     }
 
     @Override
-    public void run() {
-        // Game Loop
-        long lastTime = System.nanoTime();
-        double amountOfTicks = 60.0;
-        double ns = 1000000000.0 / amountOfTicks;
-        double delta = 0;
+    public void update() {
+        System.out.println("Atualizando o jogo...");
+    }
 
-        while (true) {
-            long now = System.nanoTime();
-            delta += (now - lastTime) / ns;
-            lastTime = now;
-            if (delta >= 1) {
-                this.update();  // Atualiza a lógica do jogo
-                Platform.runLater(this::render);  // Executa a renderização da UI
-                delta--;
-                System.out.println("Test");
-            }
-        }
+    @Override
+    public void render() {
+
+
+        System.out.println("Renderizando o jogo...");
     }
 }
