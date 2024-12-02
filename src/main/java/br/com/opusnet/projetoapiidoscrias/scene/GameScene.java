@@ -24,14 +24,12 @@ public class GameScene extends Scene implements Updatable {
 
     private Group group;
     private GameLoop gameLoop;
-
+    private Stage stage;
     public GameScene(Parent root, Stage stage) {
         super(root);
         this.group = (Group) root;
-
-
+        this.stage = stage;
         initializeScene();
-
 
         gameLoop = new GameLoop(this);  // Passa a si mesma como o Updatable
         new Thread(gameLoop).start();  // Inicia o game loop em uma thread separada
@@ -51,6 +49,7 @@ public class GameScene extends Scene implements Updatable {
 
     private void goToHomeScreen() {
 
+        stage.setScene(new HomeScene(new Group(),stage));
 
     }
 
