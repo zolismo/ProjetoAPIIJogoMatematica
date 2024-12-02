@@ -20,7 +20,7 @@ public class HelloApplication extends Application {
 
         // Criando a cena inicial (HomeScene)
         HomeScene homeScene = new HomeScene(new Group(), stage);
-
+        // faz o L
         // Configurações do Stage
         stage.setFullScreen(true);
         stage.setMinWidth(400);
