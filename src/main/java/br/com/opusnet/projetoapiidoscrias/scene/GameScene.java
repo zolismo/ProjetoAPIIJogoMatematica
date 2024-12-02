@@ -60,8 +60,6 @@ public class GameScene extends Scene implements Updatable {
 
     @Override
     public void render() {
-
-
         System.out.println("Renderizando o jogo...");
     }
 }

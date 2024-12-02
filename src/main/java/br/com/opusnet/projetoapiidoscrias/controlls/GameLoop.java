@@ -6,10 +6,9 @@ import javafx.application.Platform;
 
 public class GameLoop implements Runnable {
 
-    private static final double FPS = 60.0;  // Frames por segundo
-    private static final double NS_PER_UPDATE = 1000000000.0 / FPS;  // Convertendo FPS para nanosegundos
-
-    private Updatable updatable;  // Objeto que será atualizado e renderizado
+    private static final double FPS = 60.0;
+    private static final double NS_PER_UPDATE = 1000000000.0 / FPS;
+    private Updatable updatable;
     private boolean running = true;
 
     public GameLoop(Updatable updatable) {
@@ -27,8 +26,8 @@ public class GameLoop implements Runnable {
             lastTime = now;
 
             if (delta >= 1) {
-                updatable.update();  // Atualiza a lógica do jogo
-                Platform.runLater(updatable::render);  // Executa a renderização da UI
+                updatable.update();
+                Platform.runLater(updatable::render);
                 delta--;
             }
         }
