@@ -17,7 +17,6 @@ public class ScreenManager {
     // Construtor que recebe o stage da aplicação
     public ScreenManager(Stage stage) {
         this.stage = stage;
-
     }
 
     // Define e exibe uma nova cena

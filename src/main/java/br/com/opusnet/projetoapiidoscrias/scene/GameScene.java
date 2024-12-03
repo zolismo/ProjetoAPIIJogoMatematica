@@ -1,4 +1,4 @@
-package br.com.opusnet.projetoapiidoscrias.scene;
+/*package br.com.opusnet.projetoapiidoscrias.scene;
 
 import br.com.opusnet.projetoapiidoscrias.util.Updatable;
 import javafx.scene.*;
@@ -63,3 +63,4 @@ public class GameScene extends Scene implements Updatable {
         System.out.println("Renderizando o jogo...");
     }
 }
+*/
