@@ -4,14 +4,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
 public class HomeSceneControl {
+
     @FXML
-    public static Button b_newgame;
-    public HomeSceneControl(){
-
-    }
+    public Button b_newgame;  // O botão será injetado aqui
 
 
-    public void setAction(){
-
+    @FXML
+    public void initialize() {
+        System.out.println("Controlador HomeSceneControl carregado com sucesso!");
     }
 }

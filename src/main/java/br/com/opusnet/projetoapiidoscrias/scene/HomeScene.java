@@ -2,8 +2,8 @@ package br.com.opusnet.projetoapiidoscrias.scene;
 
 import br.com.opusnet.projetoapiidoscrias.controlls.GameLoop;
 import br.com.opusnet.projetoapiidoscrias.controlls.screencontrol.HomeSceneControl;
-import br.com.opusnet.projetoapiidoscrias.util.SizeScreen;
 import br.com.opusnet.projetoapiidoscrias.util.Updatable;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Parent;
@@ -21,7 +21,10 @@ public class HomeScene extends Scene implements Updatable {
 
     public HomeScene(Parent root, Stage stage){
         super(root);
-        buttonNewGame = new Button();
+        homeSceneControl = new HomeSceneControl();
+        homeSceneControl.initialize();
+        buttonNewGame = homeSceneControl.b_newgame;
+        buttonNewGame.setText("Novo Jogo");
 
         stage.setScene(this);
         stage.setTitle("Valus");
@@ -32,33 +35,23 @@ public class HomeScene extends Scene implements Updatable {
 
     @Override
     public void update() {
-        //System.out.println("SADasdfasfdas");
-        //HomeSceneControl.b_newgame = buttonNewGame;
+
+        if (buttonNewGame.isPressed()) {
+            System.out.println("Novo Jogo Iniciado!");
+        }
+
     }
 
     @Override
     public void render() {
 
-    }
+        //Aqui é setado as operações visuais
+        Platform.runLater(() -> {
+            if (buttonNewGame.isPressed()) {
+                buttonNewGame.setText("Iniciando Jogo...");
+             }
 
-
-
-
-    /*
-    private void initializeScene(Parent root, Stage stage) {
-        Button buttonStart = new Button("Iniciar Jogo");
-        buttonStart.setTranslateX(SizeScreen.valueWidth/2);
-        buttonStart.setTranslateY(SizeScreen.valueHeight/2);
-        buttonStart.setMinHeight(45);
-        buttonStart.setOnAction(event -> {
-            GameScene gameScene = new GameScene(new Group(), stage);
-            stage.setScene(gameScene);
-            stage.setFullScreen(true);
-            stage.setFullScreenExitHint("");
         });
-
-
+        System.out.println("Renderizando HomeScene");
     }
-
- */
 }

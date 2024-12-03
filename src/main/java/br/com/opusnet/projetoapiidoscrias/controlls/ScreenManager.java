@@ -1,3 +1,5 @@
+
+/*
 package br.com.opusnet.projetoapiidoscrias.controlls;
 
 import br.com.opusnet.projetoapiidoscrias.scene.HomeScene;
@@ -35,3 +37,6 @@ public class ScreenManager {
         switchToScene(homeScene);
     }
 }
+
+
+ */
