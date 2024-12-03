@@ -4,10 +4,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0ef2f7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0ef2f7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.opusnet.projetoapiidoscrias.controlls.screencontrol.HomeSceneControl">
    <children>
-      <Button mnemonicParsing="false" style="-fx-background-color: #1d3557;" text="Novo Jogo" textFill="WHITE">
+      <Button fx:id="b_newgame" mnemonicParsing="false" style="-fx-background-color: #1d3557;" text="Novo Jogo" textFill="WHITE">
          <font>
             <Font size="36.0" />
          </font>
