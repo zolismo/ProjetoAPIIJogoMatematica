@@ -1,6 +1,7 @@
 package br.com.opusnet.projetoapiidoscrias.scene;
 
 import br.com.opusnet.projetoapiidoscrias.util.SizeScreen;
+import br.com.opusnet.projetoapiidoscrias.util.Updatable;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Parent;
@@ -10,7 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HomeScene extends Scene {
+public class HomeScene extends Scene implements Updatable {
 
 
     public HomeScene(Parent root, Stage stage){
@@ -18,6 +19,16 @@ public class HomeScene extends Scene {
         stage.setScene(this);
         stage.setTitle("Valus");
         stage.show();
+    }
+
+    @Override
+    public void update() {
+
+    }
+
+    @Override
+    public void render() {
+
     }
 
 
