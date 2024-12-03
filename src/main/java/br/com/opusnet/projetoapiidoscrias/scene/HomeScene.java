@@ -16,21 +16,22 @@ import java.io.*;
 
 public class HomeScene extends Scene implements Updatable {
 
-    private HomeSceneControl homeSceneControl;
     private Button buttonNewGame;
+    private HomeSceneControl homeSceneControl;
     private GameLoop gameLoop;
 
-    public HomeScene(Parent root, Stage stage) throws FileNotFoundException {
+    public HomeScene(Parent root, Stage stage,HomeSceneControl homeSceneControl) throws FileNotFoundException {
         super(root);
-        homeSceneControl = new HomeSceneControl();
-        homeSceneControl.initialize();
-        buttonNewGame = homeSceneControl.b_newgame;
-        buttonNewGame.setText("Novo Jogo");
+
+        this.homeSceneControl = homeSceneControl;
 
         //Adiciona um icon pro jogo
         InputStream stream = new FileInputStream("src/main/resources/br/com/opusnet/projetoapiidoscrias/Char_Quadrado.png");
         Image icon = new Image(stream);
         stage.getIcons().add(icon);
+
+        ///Vou testar aqui se o botão é o mesmo
+
 
         stage.setScene(this);
         stage.setTitle("Valus");
@@ -41,8 +42,7 @@ public class HomeScene extends Scene implements Updatable {
 
     @Override
     public void update() {
-
-        if (buttonNewGame.isPressed()) {
+        if (homeSceneControl.b_newgame.isPressed()) {
             System.out.println("Novo Jogo Iniciado!");
         }
 
@@ -52,11 +52,13 @@ public class HomeScene extends Scene implements Updatable {
     public void render() {
         //Aqui é setado as operações visuais
         Platform.runLater(() -> {
-            if (buttonNewGame.isPressed()) {
-                buttonNewGame.setText("Iniciando Jogo...");
+            if (homeSceneControl.b_newgame.isPressed()) {
+
+                homeSceneControl.b_newgame.setText("Iniciando Jogo...");
              }
 
         });
+        System.out.println(homeSceneControl.b_newgame.getText());
         System.out.println("Renderizando HomeScene");
     }
 }
