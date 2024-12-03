@@ -5,5 +5,9 @@ import javafx.scene.control.Button;
 
 public class HomeSceneControl {
     @FXML
-    private Button b_newgame;
+    public static Button b_newgame;
+
+    public HomeSceneControl(){
+    }
+
 }
