@@ -17,20 +17,14 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage stage) {
-        // Configurando as dimensões da tela
+
         Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
         SizeScreen.valueWidth = screenBounds.getWidth();
         SizeScreen.valueHeight = screenBounds.getHeight();
 
-        // Chamando a root que inicia o arquivo .fxml
         try {
             Parent root = FXMLLoader.load(getClass().getResource("start-screen.fxml"));
-            // Criando a cena inicial (HomeScene)
             HomeScene homeScene = new HomeScene(root, stage);
-            // Configurações do Stage
-            stage.setTitle("Valus");
-            stage.setScene(homeScene);  // Define HomeScene diretamente no Stage
-            stage.show();
         }catch(IOException e){
             e.printStackTrace();
         }
