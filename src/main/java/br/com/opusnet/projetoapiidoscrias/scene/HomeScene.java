@@ -44,7 +44,6 @@ public class HomeScene extends Scene implements Updatable {
 
     @Override
     public void render() {
-
         //Aqui é setado as operações visuais
         Platform.runLater(() -> {
             if (buttonNewGame.isPressed()) {

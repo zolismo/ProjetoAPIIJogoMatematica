@@ -6,8 +6,7 @@ import javafx.scene.control.Button;
 public class HomeSceneControl {
 
     @FXML
-    public Button b_newgame;  // O botão será injetado aqui
-
+    public Button b_newgame;
 
     @FXML
     public void initialize() {
