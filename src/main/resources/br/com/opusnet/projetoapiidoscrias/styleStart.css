@@ -1,0 +1,10 @@
+.body{
+
+    //Aqui ficará o arquivo da imagem de iniciar
+    //-fx-background-image: url(teste.jpg);
+
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 100% 100%;
+}
