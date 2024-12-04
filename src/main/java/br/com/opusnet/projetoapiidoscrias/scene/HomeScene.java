@@ -22,7 +22,6 @@ public class HomeScene extends Scene implements Updatable {
 
     public HomeScene(Parent root, Stage stage,HomeSceneControl homeSceneControl) throws FileNotFoundException {
         super(root);
-
         this.homeSceneControl = homeSceneControl;
 
         //Adiciona um icon pro jogo

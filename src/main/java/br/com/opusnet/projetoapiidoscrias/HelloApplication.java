@@ -24,19 +24,12 @@ public class HelloApplication extends Application {
         SizeScreen.valueHeight = screenBounds.getHeight();
 
         try {
-            // Carregando o arquivo FXML e obtendo o controlador
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("start-screen.fxml"));
             Parent root = fxmlLoader.load(); // Aqui, o FXML é carregado, e o controlador é atribuído automaticamente
 
-            // Obtendo o controlador da cena carregada
             HomeSceneControl homeSceneControl = fxmlLoader.getController();
-
-            // Agora que o controlador está inicializado, podemos usá-lo ao criar a HomeScene
-          //  HomeScene homeScene = new HomeScene(root, stage, homeSceneControl);
-
-
-
             HomeScene homeScene = new HomeScene(root, stage,homeSceneControl);
+
         }catch(IOException e){
             e.printStackTrace();
         }
