@@ -15,8 +15,6 @@ import javafx.stage.Stage;
 import java.io.*;
 
 public class HomeScene extends Scene implements Updatable {
-
-    private Button buttonNewGame;
     private HomeSceneControl homeSceneControl;
     private GameLoop gameLoop;
 
@@ -28,9 +26,6 @@ public class HomeScene extends Scene implements Updatable {
         InputStream stream = new FileInputStream("src/main/resources/br/com/opusnet/projetoapiidoscrias/Char_Quadrado.png");
         Image icon = new Image(stream);
         stage.getIcons().add(icon);
-
-        ///Vou testar aqui se o botão é o mesmo
-
 
         stage.setScene(this);
         stage.setTitle("Valus");
