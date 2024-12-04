@@ -24,7 +24,6 @@ public class GameLoop implements Runnable {
             long now = System.nanoTime();
             delta += (now - lastTime) / NS_PER_UPDATE;
             lastTime = now;
-
             if (delta >= 1) {
                 updatable.update();
                 Platform.runLater(updatable::render);
