@@ -36,9 +36,6 @@ public class HomeScene extends Scene implements Updatable {
 
     @Override
     public void update() {
-        if (homeSceneControl.b_newgame.isPressed()) {
-            System.out.println("Novo Jogo Iniciado!");
-        }
         if (homeSceneControl.b_quit.isPressed()) {
             System.exit(0);
         }
