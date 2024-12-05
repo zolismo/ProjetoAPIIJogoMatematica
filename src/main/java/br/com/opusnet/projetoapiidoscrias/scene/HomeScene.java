@@ -2,6 +2,7 @@ package br.com.opusnet.projetoapiidoscrias.scene;
 
 import br.com.opusnet.projetoapiidoscrias.controlls.GameLoop;
 import br.com.opusnet.projetoapiidoscrias.controlls.screencontrol.HomeSceneControl;
+import br.com.opusnet.projetoapiidoscrias.model.ScreemInterface;
 import br.com.opusnet.projetoapiidoscrias.util.Updatable;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -14,7 +15,7 @@ import javafx.stage.Stage;
 
 import java.io.*;
 
-public class HomeScene extends Scene implements Updatable {
+public class HomeScene extends Scene implements Updatable, ScreemInterface {
     private HomeSceneControl homeSceneControl;
     private GameLoop gameLoop;
 
@@ -36,12 +37,10 @@ public class HomeScene extends Scene implements Updatable {
 
     @Override
     public void update() {
-<<<<<<< HEAD
         if (homeSceneControl.b_newgame.isPressed()) {
 
         }
-=======
->>>>>>> 030e864fb40bf5c365f1e98012707051b33e1061
+
         if (homeSceneControl.b_quit.isPressed()) {
             System.exit(0);
         }
