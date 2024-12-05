@@ -15,23 +15,17 @@ import javafx.stage.Stage;
 import java.io.*;
 
 public class HomeScene extends Scene implements Updatable {
-
-    private Button buttonNewGame;
     private HomeSceneControl homeSceneControl;
     private GameLoop gameLoop;
 
     public HomeScene(Parent root, Stage stage,HomeSceneControl homeSceneControl) throws FileNotFoundException {
         super(root);
-
         this.homeSceneControl = homeSceneControl;
 
         //Adiciona um icon pro jogo
         InputStream stream = new FileInputStream("src/main/resources/br/com/opusnet/projetoapiidoscrias/Char_Quadrado.png");
         Image icon = new Image(stream);
         stage.getIcons().add(icon);
-
-        ///Vou testar aqui se o botão é o mesmo
-
 
         stage.setScene(this);
         stage.setTitle("Valus");
@@ -44,6 +38,9 @@ public class HomeScene extends Scene implements Updatable {
     public void update() {
         if (homeSceneControl.b_newgame.isPressed()) {
             System.out.println("Novo Jogo Iniciado!");
+        }
+        if (homeSceneControl.b_quit.isPressed()) {
+            System.exit(0);
         }
 
     }

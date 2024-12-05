@@ -9,6 +9,9 @@ public class HomeSceneControl {
     public Button b_newgame = new Button();  // O botão será injetado aqui
 
     @FXML
+    public Button b_quit = new Button();
+
+    @FXML
     public void initialize() {
         System.out.println("Controlador HomeSceneControl carregado com sucesso!");
     }
