@@ -52,10 +52,8 @@ public class HomeScene extends Scene implements Updatable, ScreemInterface {
         //Aqui é setado as operações visuais
         Platform.runLater(() -> {
             if (homeSceneControl.b_newgame.isPressed()) {
-
                 homeSceneControl.b_newgame.setText("Iniciando Jogo...");
              }
-
         });
         System.out.println(homeSceneControl.b_newgame.getText());
         System.out.println("Renderizando HomeScene");

@@ -3,6 +3,7 @@ package br.com.opusnet.projetoapiidoscrias;
 import br.com.opusnet.projetoapiidoscrias.controlls.screencontrol.HomeSceneControl;
 
 import br.com.opusnet.projetoapiidoscrias.scene.HomeScene;
+
 import br.com.opusnet.projetoapiidoscrias.util.NavigatorScene;
 import br.com.opusnet.projetoapiidoscrias.util.SizeScreen;
 import javafx.application.Application;
@@ -26,12 +27,11 @@ public class HelloApplication extends Application {
         SizeScreen.valueHeight = screenBounds.getHeight();
 
         try {
-           /* FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("start-screen.fxml"));
+           FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("start-screen.fxml"));
             Parent root = fxmlLoader.load();
 
             HomeSceneControl homeSceneControl = fxmlLoader.getController();
             HomeScene homeScene = new HomeScene(root, stage,homeSceneControl);
-*/
 
             NavigatorScene.navigatorScene(stage, HomeScene.class,"start-screen.fxml");
 
