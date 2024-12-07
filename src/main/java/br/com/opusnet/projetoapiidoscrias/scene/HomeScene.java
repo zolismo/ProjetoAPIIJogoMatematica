@@ -5,11 +5,8 @@ import br.com.opusnet.projetoapiidoscrias.controlls.screencontrol.HomeSceneContr
 import br.com.opusnet.projetoapiidoscrias.model.ScreemInterface;
 import br.com.opusnet.projetoapiidoscrias.util.Updatable;
 import javafx.application.Platform;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
@@ -23,7 +20,8 @@ public class HomeScene extends Scene implements Updatable, ScreemInterface {
         super(root);
         this.homeSceneControl = homeSceneControl;
 
-        //Adiciona um icon pro jogo
+        int i = 0;
+
         InputStream stream = new FileInputStream("src/main/resources/br/com/opusnet/projetoapiidoscrias/Char_Quadrado.png");
         Image icon = new Image(stream);
         stage.getIcons().add(icon);
