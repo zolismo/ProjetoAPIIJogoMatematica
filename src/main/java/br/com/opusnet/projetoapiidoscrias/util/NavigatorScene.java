@@ -14,11 +14,11 @@ import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 
 public class NavigatorScene {
-    public static void navigatorScene(Stage stage, Class<? extends ScreemInterface> screemInterface, String ScreenName){
+    public static void navigatorScene(Stage stage, Class<? extends ScreemInterface> screemInterface, String screenName){
 
         try {
 
-            URL url = new File("src/main/resources/br/com/opusnet/projetoapiidoscrias/"+screemInterface).toURI().toURL();
+            URL url = new File("src/main/resources/br/com/opusnet/projetoapiidoscrias/"+screenName).toURI().toURL();
 
             /*
             FXMLLoader fxmlLoader = new FXMLLoader(NavigatorScene.class.getResource(ScreenName));
@@ -31,7 +31,7 @@ public class NavigatorScene {
             Parent root = fxmlLoader.load();
             Controll controll = fxmlLoader.getController();
 
-            ScreemInterface instance = screemInterface.getDeclaredConstructor(Parent.class,Stage.class,Controll.class).newInstance(root, stage,controll);
+            ScreemInterface instance = screemInterface.getDeclaredConstructor(Parent.class,Stage.class,Controll.class).newInstance(root, stage, controll);
 
         } catch (InstantiationException | InvocationTargetException |IllegalAccessException|NoSuchMethodException|IOException e) {
             System.out.println(e.getMessage());
