@@ -8,14 +8,26 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.net.URL;
 
 public class NavigatorScene {
     public static void navigatorScene(Stage stage, Class<? extends ScreemInterface> screemInterface, String ScreenName){
 
         try {
+
+            URL url = new File("src/main/resources/br/com/opusnet/projetoapiidoscrias/"+screemInterface).toURI().toURL();
+
+            /*
             FXMLLoader fxmlLoader = new FXMLLoader(NavigatorScene.class.getResource(ScreenName));
+            Parent root = FXMLLoader.load(url);
+            Controll controll = FXMLLoader;
+            */
+
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(url);
             Parent root = fxmlLoader.load();
             Controll controll = fxmlLoader.getController();
 
