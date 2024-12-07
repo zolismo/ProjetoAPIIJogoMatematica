@@ -18,7 +18,7 @@ public class NavigatorScene {
 
         try {
 
-            URL url = new File("src/main/resources/br/com/opusnet/projetoapiidoscrias/"+screemInterface).toURI().toURL();
+            URL url = new File("src/main/resources/br/com/opusnet/projetoapiidoscrias/"+ScreenName).toURI().toURL();
 
             /*
             FXMLLoader fxmlLoader = new FXMLLoader(NavigatorScene.class.getResource(ScreenName));
