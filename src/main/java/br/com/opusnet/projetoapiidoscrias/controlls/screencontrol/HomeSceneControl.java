@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 
 public class HomeSceneControl implements Controll {
     @FXML
-    public Button b_newgame = new Button();  // O botão será injetado aqui
+    public Button b_newgame = new Button();
 
     @FXML
     public Button b_quit = new Button();
