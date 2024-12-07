@@ -20,6 +20,7 @@ public class NavigatorScene {
 
             URL url = new File("src/main/resources/br/com/opusnet/projetoapiidoscrias/"+screenName).toURI().toURL();
 
+
             /*
             FXMLLoader fxmlLoader = new FXMLLoader(NavigatorScene.class.getResource(ScreenName));
             Parent root = FXMLLoader.load(url);
