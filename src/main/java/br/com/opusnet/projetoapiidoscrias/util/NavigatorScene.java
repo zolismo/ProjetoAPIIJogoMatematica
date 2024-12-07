@@ -20,9 +20,6 @@ public class NavigatorScene {
 
             URL url = new File("src/main/resources/br/com/opusnet/projetoapiidoscrias/"+screenName).toURI().toURL();
 
-            if(url==null){
-                System.out.println("ratomanocu");
-            }
 
             /*
             FXMLLoader fxmlLoader = new FXMLLoader(NavigatorScene.class.getResource(ScreenName));
@@ -32,10 +29,9 @@ public class NavigatorScene {
 
             FXMLLoader fxmlLoader = new FXMLLoader();
             fxmlLoader.setLocation(url);
-            Parent root = fxmlLoader.load();
             Controll controll = fxmlLoader.getController();
 
-            ScreemInterface instance = screemInterface.getDeclaredConstructor(Parent.class,Stage.class,Controll.class).newInstance(root, stage, controll);
+            ScreemInterface instance = screemInterface.getDeclaredConstructor(Parent.class,Stage.class,Controll.class).newInstance(fxmlLoader.load(), stage, controll);
 
         } catch (InstantiationException | InvocationTargetException |IllegalAccessException|NoSuchMethodException|IOException e) {
             System.out.println(e.getMessage());

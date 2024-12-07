@@ -7,12 +7,6 @@ import javafx.stage.Stage;
 
 public class ControllerTotal {
 
-    @FXML
-    Button b_newgame = new Button();
-
-    @FXML
-    Button b_quit;
-
 
 
 }

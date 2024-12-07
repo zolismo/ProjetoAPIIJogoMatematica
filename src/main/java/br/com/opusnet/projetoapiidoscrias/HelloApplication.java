@@ -29,7 +29,7 @@ public class HelloApplication extends Application {
         try {
 
 
-             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("start-screen.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("start-screen.fxml"));
             Parent root = fxmlLoader.load();
 
             HomeSceneControl homeSceneControl = fxmlLoader.getController();
@@ -38,7 +38,7 @@ public class HelloApplication extends Application {
 
 
 
-          //  NavigatorScene.navigatorScene(stage, HomeScene.class,"start-screen.fxml");
+     //       NavigatorScene.navigatorScene(stage, HomeScene.class,"start-screen.fxml");
 
         }catch(IOException e){
             e.printStackTrace();
