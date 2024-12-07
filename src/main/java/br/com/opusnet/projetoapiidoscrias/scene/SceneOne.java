@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 public class SceneOne extends Scene  implements Updatable, ScreemInterface {
 
-    public SceneOne(Parent root, Stage stage, SceneOneController control) {
+    public SceneOne(Parent root, Stage stage ) {
         super(root);
         String css = this.getClass().getResource("styles/teste.css").toExternalForm();
         this.getStylesheets().add(css);

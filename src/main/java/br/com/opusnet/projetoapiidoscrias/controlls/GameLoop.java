@@ -3,6 +3,8 @@ package br.com.opusnet.projetoapiidoscrias.controlls;
 import br.com.opusnet.projetoapiidoscrias.util.Updatable;
 import javafx.application.Platform;
 
+import java.io.IOException;
+
 public class GameLoop implements Runnable {
     private static final double FPS = 60.0;
     private static final double NS_PER_UPDATE = 1000000000.0 / FPS;
@@ -23,7 +25,11 @@ public class GameLoop implements Runnable {
             delta += (now - lastTime) / NS_PER_UPDATE;
             lastTime = now;
             if (delta >= 1) {
-                updatable.update();
+                try {
+                    updatable.update();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
                 Platform.runLater(updatable::render);
                 delta--;
             }
