@@ -36,7 +36,7 @@
             <Button mnemonicParsing="false" prefHeight="82.0" prefWidth="104.0" text="*" />
          </children>
       </HBox>
-      <Button layoutX="100.0" layoutY="357.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="b_char1" layoutX="100.0" layoutY="357.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" text="Button" />
       <Button layoutX="175.0" layoutY="357.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" text="Button" />
       <Button layoutX="250.0" layoutY="357.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" text="Button" />
       <Button layoutX="323.0" layoutY="357.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" text="Button" />
