@@ -18,28 +18,28 @@
       </Text>
       <HBox alignment="CENTER" layoutY="390.0" prefHeight="200.0" prefWidth="250.0" styleClass="hbox" stylesheets="@teste.css" AnchorPane.bottomAnchor="0.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="82.0" prefWidth="104.0" stylesheets="@teste.css" text="+" />
+            <Button fx:id="b_add" mnemonicParsing="false" prefHeight="82.0" prefWidth="104.0" stylesheets="@teste.css" text="+" />
          </children>
       </HBox>
       <HBox alignment="CENTER" layoutX="250.0" layoutY="395.0" prefHeight="200.0" prefWidth="250.0" styleClass="hbox" stylesheets="@teste.css" AnchorPane.bottomAnchor="0.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="82.0" prefWidth="104.0" text="-" />
+            <Button fx:id="b_sub" mnemonicParsing="false" prefHeight="82.0" prefWidth="104.0" text="-" />
          </children>
       </HBox>
       <HBox alignment="CENTER" layoutX="500.0" layoutY="403.0" prefHeight="200.0" prefWidth="250.0" styleClass="hbox" stylesheets="@teste.css">
          <children>
-            <Button mnemonicParsing="false" prefHeight="82.0" prefWidth="104.0" text="/" />
+            <Button fx:id="b_div" mnemonicParsing="false" prefHeight="82.0" prefWidth="104.0" text="/" />
          </children>
       </HBox>
       <HBox alignment="CENTER" layoutX="750.0" layoutY="413.0" prefHeight="200.0" prefWidth="250.0" styleClass="hbox" stylesheets="@teste.css" AnchorPane.bottomAnchor="0.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="82.0" prefWidth="104.0" text="*" />
+            <Button fx:id="b_mult" mnemonicParsing="false" prefHeight="82.0" prefWidth="104.0" text="*" />
          </children>
       </HBox>
-      <Button layoutX="100.0" layoutY="357.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" text="Button" />
-      <Button layoutX="175.0" layoutY="357.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" text="Button" />
-      <Button layoutX="250.0" layoutY="357.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" text="Button" />
-      <Button layoutX="323.0" layoutY="357.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="b_char1" layoutX="100.0" layoutY="357.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="b_char2" layoutX="175.0" layoutY="357.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="b_char3" layoutX="250.0" layoutY="357.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="b_char4" layoutX="323.0" layoutY="357.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="52.0" text="Button" />
       <ImageView fx:id="iv_enemy1" fitHeight="176.0" fitWidth="200.0" layoutX="716.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@pngegg.png" />

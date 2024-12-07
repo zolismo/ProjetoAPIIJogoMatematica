@@ -28,15 +28,11 @@ public class HelloApplication extends Application {
 
         try {
 
-
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("start-screen.fxml"));
             Parent root = fxmlLoader.load();
 
             HomeSceneControl homeSceneControl = fxmlLoader.getController();
             HomeScene homeScene = new HomeScene(root, stage,homeSceneControl);
-
-
-
 
      //       NavigatorScene.navigatorScene(stage, HomeScene.class,"start-screen.fxml");
 
