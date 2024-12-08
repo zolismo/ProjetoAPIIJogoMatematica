@@ -6,7 +6,7 @@ import javafx.application.Platform;
 import java.io.IOException;
 
 public class GameLoop implements Runnable {
-    private static final double FPS = 30.0;
+    private static final double FPS = 25.0;
     private static final double NS_PER_UPDATE = 1000000000.0 / FPS;
     private Updatable updatable;
     private boolean running = true;

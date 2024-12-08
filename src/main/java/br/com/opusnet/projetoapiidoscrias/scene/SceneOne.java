@@ -26,6 +26,7 @@ public class SceneOne extends Scene implements Updatable, ScreemInterface {
 
     private double[] valueSelected = {0, 0};
     private int buttonPressed = 0;
+    boolean win = false;
 
     private boolean sentinel = true;
 
@@ -67,6 +68,13 @@ public class SceneOne extends Scene implements Updatable, ScreemInterface {
                 controller.t_level1.setText("Você perdeu");
                 gameLoop.stop();
             }
+
+            if(win == true){
+                controller.t_level1.setVisible(true);
+                controller.t_level1.setText("Você ganhou");
+                gameLoop.stop();
+            }
+
             moveEnime();
 
         });
@@ -113,6 +121,9 @@ public class SceneOne extends Scene implements Updatable, ScreemInterface {
                 System.out.println(respostPerson);
                 LifeGame.lifeGame--;
                 resetGameState();
+
+            }else{
+                win = true;
             }
         }
     }
