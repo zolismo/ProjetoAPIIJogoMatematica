@@ -4,6 +4,7 @@ import br.com.opusnet.projetoapiidoscrias.model.Controll;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
 
 public class SceneOneController implements Controll {
 
@@ -33,5 +34,8 @@ public class SceneOneController implements Controll {
 
     @FXML
     public ImageView iv_enemy1 = new ImageView();
+
+    @FXML
+    public Text t_level1 = new Text();
 
 }
