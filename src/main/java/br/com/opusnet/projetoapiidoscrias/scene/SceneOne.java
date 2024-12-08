@@ -80,18 +80,53 @@ public class SceneOne extends Scene implements Updatable, ScreemInterface {
         });
     }
 
+    private boolean buttonProcessed = false;
+
     private void handleButtonPress() {
-        if (controller.b_add.isPressed() && buttonPressed == 0) buttonPressed = 1;
-        else if (controller.b_sub.isPressed() && buttonPressed == 0) buttonPressed = 2;
-        else if (controller.b_mult.isPressed() && buttonPressed == 0) buttonPressed = 3;
-        else if (controller.b_div.isPressed() && buttonPressed == 0) buttonPressed = 4;
+        if (!buttonProcessed) {
+            if (controller.b_add.isPressed()) {
+                buttonPressed = 1;
+                buttonProcessed = true;
+            } else if (controller.b_sub.isPressed()) {
+                buttonPressed = 2;
+                buttonProcessed = true;
+            } else if (controller.b_mult.isPressed()) {
+                buttonPressed = 3;
+                buttonProcessed = true;
+            } else if (controller.b_div.isPressed()) {
+                buttonPressed = 4;
+                buttonProcessed = true;
+            }
+        }
+
+        if (!controller.b_add.isPressed() && !controller.b_sub.isPressed() &&
+                !controller.b_mult.isPressed() && !controller.b_div.isPressed()) {
+            buttonProcessed = false;
+        }
     }
 
+    private boolean personSelectionProcessed = false;
     private void handlePersonSelect() {
-        if (controller.b_char1.isPressed()) setSelection(Double.parseDouble(controller.b_char1.getText()));
-        else if (controller.b_char2.isPressed()) setSelection(Double.parseDouble(controller.b_char2.getText()));
-        else if (controller.b_char3.isPressed()) setSelection(Double.parseDouble(controller.b_char3.getText()));
-        else if (controller.b_char4.isPressed()) setSelection(Double.parseDouble(controller.b_char4.getText()));
+        if (!personSelectionProcessed) {
+            if (controller.b_char1.isPressed()) {
+                setSelection(Double.parseDouble(controller.b_char1.getText()));
+                personSelectionProcessed = true;
+            } else if (controller.b_char2.isPressed()) {
+                setSelection(Double.parseDouble(controller.b_char2.getText()));
+                personSelectionProcessed = true;
+            } else if (controller.b_char3.isPressed()) {
+                setSelection(Double.parseDouble(controller.b_char3.getText()));
+                personSelectionProcessed = true;
+            } else if (controller.b_char4.isPressed()) {
+                setSelection(Double.parseDouble(controller.b_char4.getText()));
+                personSelectionProcessed = true;
+            }
+        }
+
+        if (!controller.b_char1.isPressed() && !controller.b_char2.isPressed() &&
+                !controller.b_char3.isPressed() && !controller.b_char4.isPressed()) {
+            personSelectionProcessed = false;
+        }
     }
 
     private void setSelection(double value) {
@@ -133,4 +168,6 @@ public class SceneOne extends Scene implements Updatable, ScreemInterface {
         valueSelected = new double[]{0, 0};
         buttonPressed = 0;
     }
+
+
 }
