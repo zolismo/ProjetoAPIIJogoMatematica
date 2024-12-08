@@ -71,8 +71,8 @@ public class SceneOne extends Scene implements Updatable, ScreemInterface {
     }
 
     private void handleButtonPress() {
-        if (controller.b_sub.isPressed() && buttonPressed == 0) buttonPressed = 1;
-        else if (controller.b_add.isPressed() && buttonPressed == 0) buttonPressed = 2;
+        if (controller.b_add.isPressed() && buttonPressed == 0) buttonPressed = 1;
+        else if (controller.b_sub.isPressed() && buttonPressed == 0) buttonPressed = 2;
         else if (controller.b_mult.isPressed() && buttonPressed == 0) buttonPressed = 3;
         else if (controller.b_div.isPressed() && buttonPressed == 0) buttonPressed = 4;
     }
@@ -108,6 +108,7 @@ public class SceneOne extends Scene implements Updatable, ScreemInterface {
             }
 
             if (respostPerson != valueEnime) {
+                System.out.println(respostPerson);
                 LifeGame.lifeGame--;
                 resetGameState();
             }
