@@ -52,6 +52,9 @@ public class SceneOne extends Scene implements Updatable, ScreemInterface {
         System.out.println("Value 2: " + valueSelected[1]);
         System.out.println("Button Pressed: " + buttonPressed);
         System.out.println("Resposta calculada: " + respostPerson);
+        handleButtonPress();
+        handlePersonSelect();
+
         checkAnswer();
 
     }
@@ -65,8 +68,7 @@ public class SceneOne extends Scene implements Updatable, ScreemInterface {
                 gameLoop.stop();
             }
             moveEnime();
-            handleButtonPress();
-            handlePersonSelect();
+
         });
     }
 
